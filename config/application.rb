@@ -23,6 +23,6 @@ module Iamspotify
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    RSpotify::authenticate("b982c9a5c7374263b34900f40fc80722", "c1c87b6e1a4a4563b7bcd35e6b37e942")
+    RSpotify::authenticate("b982c9a5c7374263b34900f40fc80722", "42d769517c4642e49acf53d08da0e70b")
   end
 end
