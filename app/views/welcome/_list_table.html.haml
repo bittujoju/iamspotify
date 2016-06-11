@@ -1,0 +1,12 @@
+%table.table.table-hover.table-condensed.table-striped#categories-table
+  %tr
+    %td#header
+      Artist
+    %td#header
+      Popularity
+  - @artists.each do |artist|
+    %tr
+      %td
+        = artist.name
+      %td
+        = artist.popularity
