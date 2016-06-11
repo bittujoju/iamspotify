@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/search_artist/', to: 'welcome#search_artist', as: :search_artist
 
   get '/auth/spotify/callback', to: 'users#spotify'
+  get '/auth/failure' , to: 'users#failure'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
