@@ -9,11 +9,11 @@
 <body>
   <h2 class="main-heading" align="center"> IamSpotify </h2>
   <div align="right">
-  <% unless @spotify_user %>
+  <% unless session['user_id'] %>
     <%= link_to 'Sign in with Spotify', '/auth/spotify' , class: "btn btn-info btn-lg"%>
   <% else %>
-    <%= @spotify_user.email %>
-    <%= link_to 'Sign out', '#' , class: "btn btn-info btn-lg"%>
+    <%= session['user_id'] %>
+    <%= link_to 'Sign out', user_logout_path , class: "btn btn-info btn-lg"%>
   <% end %>
 
   </div>
@@ -21,8 +21,8 @@
   <br>
   <% if @spotify_user %>
     <ul>
-      <li><a class="active" href="#home">Playlist</a></li>
-      <li><a href="#news">Followers</a></li>
+      <li><a class="active" href="/playlist">Playlist</a></li>
+      <li><a href="/followers">Followers</a></li>
       <li><a href="#contact">Follows</a></li>
       <li><a href="#about">About</a></li>
     </ul>

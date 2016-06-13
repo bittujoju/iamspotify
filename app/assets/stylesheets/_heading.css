@@ -12,3 +12,8 @@
 	width: 1500px;
 	margin-left: 20px;
 }
+
+.user-id {
+	font-weight: bold;
+	padding-right: 20px;
+}
