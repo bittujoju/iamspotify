@@ -9,4 +9,8 @@ class UsersController < ApplicationController
     @message = params['message'] if params['message']
   end
 
+  def sign_in
+  end
+  
+
 end

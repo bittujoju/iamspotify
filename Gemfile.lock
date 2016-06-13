@@ -182,6 +182,7 @@ DEPENDENCIES
   haml
   jbuilder (~> 2.0)
   jquery-rails
+  omniauth-oauth2
   pg (~> 0.15)
   rails (= 4.2.6)
   rspotify
