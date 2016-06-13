@@ -9,5 +9,5 @@
       %td
         = playlist.name
       %td
-        = link_to 'tracks', '#' , class: "btn btn-success btn-sm", id: playlist.id
+        = link_to 'tracks', user_tracks_path(id: playlist.id) , class: "btn btn-success btn-sm"
 

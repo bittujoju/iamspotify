@@ -1,10 +1,10 @@
-%form{:name => "artist", :action => "/", :method => "get", :enctype => "text/plain"}
+%form{:name => "track", :action => "/", :method => "get", :enctype => "text/plain"}
   %fieldset
     .filters-artist
       %input{:type => "text", :name => "query", :class => "text-input"}
-      %input{:type => "submit", :value => "Search Artists", :class => "btn-success"}
+      %input{:type => "submit", :value => "Search Tracks", :class => "btn btn-success"}
 
 %br
 
-- if @artists
-  = render partial: 'list_table', locals: {artists: @artists}
+- if @tracks
+  = render partial: 'list_table', locals: {artists: @tracks}

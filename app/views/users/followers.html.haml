@@ -1,0 +1,12 @@
+- if @followers.include? nil
+  %table.table.table-hover.table-condensed.table-striped#categories-table
+    %tr
+      %td#header
+        Followers
+    - @followers.each do |follower|
+      %tr
+        %td
+          = follower.name
+- else
+  %h4
+    = 'You currently have no followers!!'

@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   get '/auth/failure' , to: 'users#failure'
 
   get '/playlists' , to: 'users#playlists', as: :user_playlists
-  get '/tracks' , to: 'users#tracks'
-  get '/followers' , to: 'users#followers'
+  get '/tracks' , to: 'users#tracks', as: :user_tracks
+  get '/followers' , to: 'users#followers', as: :user_followers
+  get '/following' , to: 'users#following', as: :user_following
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

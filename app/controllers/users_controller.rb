@@ -15,10 +15,17 @@ class UsersController < ApplicationController
   	  @playlists = @spotify_user.playlists
   end
 
-
   def tracks
-    playlist = RSpotify::Playlist.find(params['user_id'],  params['id'])
+    playlist = RSpotify::Playlist.find(@spotify_user.id,  params['id'])
     @tracks = playlist.tracks
+  end
+
+  def followers
+    @followers = @spotify_user.followers
+  end
+
+  def following
+  	@following = @spotify_user.following
   end
 
   def failure
