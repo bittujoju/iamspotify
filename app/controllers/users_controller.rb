@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   
   def spotify
-    spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
-    @playlists = spotify_user.playlists
+    @spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
   end
 
   def failure
@@ -11,6 +10,6 @@ class UsersController < ApplicationController
 
   def sign_in
   end
-  
+
 
 end
