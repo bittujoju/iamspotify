@@ -1,0 +1,8 @@
+%table.table.table-hover.table-condensed.table-striped#categories-table
+  %tr
+    %td#header
+      Tracks
+  - @tracks.each do |track|
+    %tr
+      %td
+        = track.name

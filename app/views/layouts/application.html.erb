@@ -13,12 +13,20 @@
     <%= link_to 'Sign in with Spotify', '/auth/spotify' , class: "btn btn-info btn-lg"%>
   <% else %>
     <%= @spotify_user.email %>
-    <%= link_to 'Sign out', '/' , class: "btn btn-info btn-lg"%>
+    <%= link_to 'Sign out', '#' , class: "btn btn-info btn-lg"%>
   <% end %>
 
   </div>
   <br>
   <br>
+  <% if @spotify_user %>
+    <ul>
+      <li><a class="active" href="#home">Playlist</a></li>
+      <li><a href="#news">Followers</a></li>
+      <li><a href="#contact">Follows</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  <% end %>
 <%= yield %>
 
 </body>

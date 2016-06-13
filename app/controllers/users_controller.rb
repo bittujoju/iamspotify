@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  def spotify
+  def playlist
     @spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
   end
 
@@ -8,8 +8,9 @@ class UsersController < ApplicationController
     @message = params['message'] if params['message']
   end
 
-  def sign_in
+  def tracks
+    playlist = RSpotify::Playlist.find(params['user_id'],  params['id'])
+    @tracks = playlist.tracks
   end
-
 
 end
