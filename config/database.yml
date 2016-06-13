@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: iamspotify_production
-  username: bittujoju
-  password: <%= ENV['IAMSPOTIFY_DATABASE_PASSWORD'] %>
+  database: df4hsn1abncpe
+  username: ccaxamlxrqreos
+  password: 'hdM4HU1whx2m1gIA2i5bPOvYAX'
