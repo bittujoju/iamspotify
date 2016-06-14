@@ -1,0 +1,25 @@
+%form{:name => "artists", :action => "/artists", :method => "get", :enctype => "text/plain"}
+  %fieldset
+    .filters-artist
+      %input{:type => "text", :name => "query", :class => "text-input"}
+      %input{:type => "submit", :value => "Search Artists", :class => "btn btn-success"}
+
+%br
+
+- if @artists
+  %table.table.table-hover.table-condensed.table-striped#categories-table
+    %tr
+      %td#header
+        Artist
+      %td#header
+        Popularity
+      %td#header
+        Follow
+    - @artists.each do |artist|
+      %tr
+        %td
+          = artist.name
+        %td
+          = artist.popularity
+        %td
+          = link_to 'Follow', follow_artist_path(id: artist.id) , id: 'follow-button', class: "btn btn-success btn-sm", id: artist.id, remote: true

@@ -21,10 +21,10 @@
   <br>
   <% if @spotify_user %>
     <ul>
-      <li><a class="active" href="/playlists">Playlist</a></li>
-      <li><a href="/followers">Followers</a></li>
-      <li><a href="/artists">Search Artists</a></li>
-      <li><a href="/Albums">Search Album</a></li>
+      <li><a class="playlists-link" href="/playlists">Playlist</a></li>
+      <li><a class="followers-link" href="/followers">Followers</a></li>
+      <li><a class="artists-link" href="/artists">Search Artists</a></li>
+      <li><a class="albums-link" href="/albums">Search Album</a></li>
     </ul>
   <% end %>
 <%= yield %>

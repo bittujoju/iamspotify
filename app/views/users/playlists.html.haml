@@ -11,3 +11,8 @@
       %td
         = link_to 'tracks', user_tracks_path(id: playlist.id) , class: "btn btn-success btn-sm"
 
+%script
+  $(document).ready(function() {
+  $('.playlists-link').addClass('active')
+  });
+

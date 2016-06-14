@@ -1,0 +1,8 @@
+var f = ( $('#<%= @artist.id%>').html() == "Follow" );
+if (f) {
+  $('#<%= @artist.id%>').html('Unfollow');
+}
+else{
+  $('#<%= @artist.id%>').html('Follow');
+}
+

@@ -15,7 +15,10 @@ Rails.application.routes.draw do
   get '/playlists' , to: 'users#playlists', as: :user_playlists
   get '/tracks' , to: 'users#tracks', as: :user_tracks
   get '/followers' , to: 'users#followers', as: :user_followers
-  get '/following' , to: 'users#following', as: :user_following
+  get '/artists' , to: 'users#artists', as: :user_artists
+  get '/albums' , to: 'users#albums', as: :albums
+  get '/aritst/follow', to: 'users#follow', as: :follow_artist
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

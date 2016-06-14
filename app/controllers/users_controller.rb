@@ -24,8 +24,18 @@ class UsersController < ApplicationController
     @followers = @spotify_user.followers
   end
 
-  def following
-  	@following = @spotify_user.following
+  def artists
+    @artists = RSpotify::Artist.search(params[:query]) if params[:query]
+  end
+
+  def follow
+    @artist = RSpotify::Artist.find(params['id']) if params['id']
+    # @spotify_user.follow(@artist)
+    respond_to do |format|
+      format.js do
+        render 'follow_artist.js.erb'
+      end
+    end
   end
 
   def failure
