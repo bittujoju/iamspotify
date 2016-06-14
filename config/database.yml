@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  url: "postgres://ccaxamlxrqreos:hdM4HU1whx2m1gIA2i5bPOvYAX@ec2-54-83-202-115.compute-1.amazonaws.com:5432/df4hsn1abncpe"
   database: df4hsn1abncpe
   username: ccaxamlxrqreos
   password: 'hdM4HU1whx2m1gIA2i5bPOvYAX'
