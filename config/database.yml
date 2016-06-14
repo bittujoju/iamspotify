@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  host: ec2-54-83-202-115.compute-1.amazonaws.com
   url: <%= ENV['DATABASE_URL'] %>
   database: df4hsn1abncpe
   username: ccaxamlxrqreos
