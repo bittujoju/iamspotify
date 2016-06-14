@@ -3,10 +3,10 @@
     %td#header
       Tracks
     %td#header
-      Popularity
+      Preview
   - @tracks.each do |track|
     %tr
       %td
         = track.name
       %td
-        = track.popularity
+        = render partial: 'shared/audio_link', locals: {url: track.preview_url}

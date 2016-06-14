@@ -2,10 +2,14 @@
   %tr
     %td#header
       Tracks
+    %td#header
+      Preview
   - @tracks.each do |track|
     %tr
       %td
         = track.name
+      %td
+        = render partial: 'shared/audio_link', locals: {url: track.preview_url}
 
 
 %script

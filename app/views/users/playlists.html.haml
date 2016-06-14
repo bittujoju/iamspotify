@@ -3,13 +3,29 @@
     %td#header
       Playlists
     %td#header
-      = link_to 'Create Playlist', '/create_playlist' , class: "btn btn-info btn-sm"
+      %button.btn.btn-info.btn-lg{"data-target" => "#createPlaylist", "data-toggle" => "modal", :type => "button", :class => "btn btn-info btn-sm"} Create Playlist
   - @playlists.each do |playlist|
     %tr
       %td
         = playlist.name
       %td
         = link_to 'tracks', user_tracks_path(id: playlist.id) , class: "btn btn-success btn-sm"
+
+/ Modal
+#createPlaylist.modal.fade{:role => "dialog"}
+  .modal-dialog
+    / Modal content
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"} &times;
+        %h4.modal-title Create Playlist
+      .modal-body
+        %form{:name => "track", :action => "/create_playlist", :method => "get", :enctype => "text/plain"}
+          %fieldset
+            %input{:type => "text", :name => "playlist_name", :class => "playlist-name"}
+            %input{:type => "submit", :value => "Create Playlist", :class => "btn btn-success"}
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
 
 %script
   $(document).ready(function() {

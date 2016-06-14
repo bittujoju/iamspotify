@@ -13,6 +13,10 @@
 	margin-left: 20px;
 }
 
+.playlist-name {
+	width: 430px;
+}
+
 .user-id {
 	font-weight: bold;
 	padding-right: 20px;

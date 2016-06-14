@@ -38,6 +38,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def create_playlist
+    @spotify_user.create_playlist!(params['playlist_name'])
+    redirect_to user_playlists_path
+  end
+
   def failure
     @message = params['message'] if params['message']
   end
