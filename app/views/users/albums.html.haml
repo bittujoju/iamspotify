@@ -1,0 +1,21 @@
+%form{:name => "albums", :action => "/albums", :method => "get", :enctype => "text/plain"}
+  %fieldset
+    .filters-artist
+      %input{:type => "text", :name => "query", :class => "text-input"}
+      %input{:type => "submit", :value => "Search Albums", :class => "btn btn-success"}
+
+%br
+
+- if @albums
+  %table.table.table-hover.table-condensed.table-striped#categories-table
+    %tr
+      %td#header
+        Albums
+      %td#header
+        Popularity
+    - @albums.each do |album|
+      %tr
+        %td
+          = album.name
+        %td
+          = album.popularity

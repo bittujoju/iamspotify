@@ -43,6 +43,9 @@ class UsersController < ApplicationController
     redirect_to user_playlists_path
   end
 
+  def albums
+    @albums = RSpotify::Album.search(params[:query]) if params[:query]
+  end
   def failure
     @message = params['message'] if params['message']
   end
